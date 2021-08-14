@@ -8,7 +8,7 @@ pipeline {
     // sudo usermod -a -G docker jenkins
     // restart jenkins server ->  sudo service jenkins restart
 
-    tools {nodejs "nodejs"}
+    
     stages {
     stage('Install') {
       steps { sh 'npm install' }
