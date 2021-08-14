@@ -8,23 +8,23 @@ pipeline {
     // sudo usermod -a -G docker jenkins
     // restart jenkins server ->  sudo service jenkins restart
     stages {
-        
-        stage('Maven Compile') {
-            steps {
-                echo '----------------- This is a compile phase ----------'
-                sh 'mvn clean compile'
-            }
-        }
-        
-        stage('Maven Build') {
-             steps {
-                echo '----------------- This is a build phase ----------'
-                sh 'mvn clean package -DskipTests'
-            }
-        }
-
-        
-
-        
+    stage('Install') {
+      steps { sh 'npm install' }
     }
+
+    stage('Test') {
+      parallel {
+        stage('Static code analysis') {
+            steps { sh 'npm run-script lint' }
+        }
+        stage('Unit tests') {
+            steps { sh 'npm run-script test' }
+        }
+      }
+    }
+
+    stage('Build') {
+      steps { sh 'npm run-script build' }
+    }
+  }
 }
