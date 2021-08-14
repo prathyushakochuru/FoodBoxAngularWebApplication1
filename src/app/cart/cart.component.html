@@ -1,0 +1,15 @@
+<h3>Hello, {{username}}!</h3>&nbsp;&nbsp;&nbsp;&nbsp;<a routerLink="/">Log out</a>
+<br>
+<h2 style="text-align: center;">Your Cart</h2><br><br>
+
+<label><strong>Item name: </strong></label> {{name}}
+<br><br>
+<label><strong>Descrption: </strong></label> {{desc}}
+<br><br>
+<label><strong>No. of items: </strong></label> {{number}}
+<br><br>
+<label><strong>Price: </strong></label> ${{price}}.00
+<br>
+<br><br>
+<button type="button" class="button" (click)="gotoPayment()">Continue to checkout</button>
+

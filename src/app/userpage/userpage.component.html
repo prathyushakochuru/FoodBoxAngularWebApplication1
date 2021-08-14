@@ -1,0 +1,18 @@
+
+
+<br>
+<br>
+<h2><strong>Welcome, </strong>{{strusername}} !</h2>&nbsp;&nbsp;&nbsp;&nbsp;<a routerLink="/">Log out</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="button" class="btn btn-success" (click) = "goToOrdersHistory()">Order History</button>
+<br>
+<br><br>
+<h4>Search for the products</h4>
+
+<div class="input-group">
+    <input type="search" class="form-control rounded" [(ngModel)]="searchstring" placeholder="Search" aria-label="Search"
+      aria-describedby="search-addon" />
+    <button type="button" class="btn btn-outline-primary" (click) = "goToProducts()">Search</button>
+  </div>
+
+

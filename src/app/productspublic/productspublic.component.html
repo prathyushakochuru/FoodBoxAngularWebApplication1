@@ -1,0 +1,30 @@
+
+<br>
+<h4>Showing results for </h4>
+
+<table class="table table-striped table-bordered">
+    
+    <thead>
+      <tr>
+        
+        <th scope="col">Name</th>
+        
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products">
+        
+        <td>{{p.productname}}</td>
+        <td>{{p.description}}</td>
+        <td>{{p.price}}</td>
+        <td>
+            <button type="button" class="btn btn-warning" routerLink="/user"> Buy</button> &nbsp;
+            
+        </td>
+      </tr>
+    </tbody>
+  </table>

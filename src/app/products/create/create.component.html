@@ -1,0 +1,42 @@
+<h4>Create - Product</h4>
+<div class="well well-lg">
+    
+        <div class="form-row">
+            <div class="form-group col-md">
+                <label for="name"> Name </label>
+                <input type="text" class="form-control" formControlName="name" ([ngModel])="name" name="name" 
+                 id="name" placeholder="Enter Product Name" >
+                
+            </div>
+            <div class="form-group col-md">
+                <label for="description"> Descriptipn </label>
+                <input type="text"  class="form-control" formControlName="description" ([ngModel])="description" name="description" 
+                id="description" placeholder="Enter Product Description" >
+                
+            </div>
+        </div>
+        <div class="form-row">
+
+            <div class="form-group col-md">
+                <label for="category">Category</label>
+                <input type="text" class="form-control" formControlName="category" ([ngModel])="category" name="category" id="category" 
+                    placeholder="category" >
+                
+              </div>
+        </div> 
+        <div class="form-row">
+
+            <div class="form-group col-md">
+                <label for="price">Price</label>
+                <input type="text" class="form-control"  formControlName="price" ([ngModel])="price"name="price" id="price" 
+                    placeholder="price" >
+                
+              </div>
+        </div> 
+        <br><br>
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" (click)="createProduct()" >Create Product</button>
+        </div>
+      
+
+</div>

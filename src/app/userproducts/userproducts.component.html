@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap sortable table columns example</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://drvic10k.github.io/bootstrap-sortable/Contents/bootstrap-sortable.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.js"></script>
+  <script src="https://drvic10k.github.io/bootstrap-sortable/Scripts/bootstrap-sortable.js"></script>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<br>
+<h3>Welcome {{strusername}}!</h3>&nbsp;&nbsp; &nbsp;&nbsp;
+<button type="button" class="btn btn-warning" (click)="gobacktouserpage()"> Go back</button>
+&nbsp;&nbsp; &nbsp;&nbsp;<a routerLink="/">Log out</a> 
+<br>
+<h4>Showing products for {{strsearch}}</h4>
+
+<table class="table table-bordered sortable" >
+    
+    <thead>
+      <tr>
+        
+        <th scope="col">Name</th>
+        
+        <th scope="col">Description</th>
+        <th scope="col" >Price</th>
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products">
+        
+        <td>{{p.productname}}</td>
+        <td>{{p.description}}</td>
+        <td>{{p.price}}</td>
+
+        <td>
+          <select id="count" name="count" [(ngModel)]="count">
+           
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="7">9</option>
+            <option value="8">10</option>
+          </select>
+        </td>
+        <td>
+            <button type="button" class="btn btn-warning" (click)="addtoCart(p)">  Add to cart</button> &nbsp;
+            
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </body>
+  </html>

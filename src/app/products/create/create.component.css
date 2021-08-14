@@ -1,0 +1,19 @@
+.well {
+    background-color: #cff4fc;
+    border: 1px solid black;
+    align-self: center;
+    padding: 20px;
+    margin-top: 20px;
+    width: 70%;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #41464b;
+    border-color: #41464b;
+}
+
+.has-error {
+    color: red;
+    font-weight: 500;
+}

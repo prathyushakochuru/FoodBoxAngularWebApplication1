@@ -1,0 +1,35 @@
+
+<br>
+<h3>Welcome {{strusername}}!</h3>
+<br>
+<h4>Showing results for {{stringsearch}}</h4>
+
+
+<h1>Product List </h1>
+<button class="btn btn-primary pull-right" (click)="goToCreate()" >Create Product</button> &nbsp;&nbsp; <a routerLink="/">Log out</a>
+<table class="table table-striped table-bordered">
+    
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products">
+        <th scope="row" >{{p.id}}</th>
+        <td>{{p.productname}}</td>
+        <td>{{p.description}}</td>
+        <td>{{p.price}}</td>
+        <td>
+            <button type="button" class="btn btn-warning" (click)="updateProduct(p)"> Edit</button> &nbsp;
+            <button type="button" class="btn btn-danger" (click)="deleteProduct(p.id)"> Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
