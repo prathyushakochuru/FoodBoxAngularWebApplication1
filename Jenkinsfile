@@ -1,13 +1,4 @@
-pipeline {
-    agent any 
 
-    triggers {
-        pollSCM('* * * * *')
-    }
-    // Got permission denied while trying to connect to the Docker daemon socket at unix.
-    // sudo usermod -a -G docker jenkins
-    // restart jenkins server ->  sudo service jenkins restart
-    //tools {nodejs "NODEJS"}
     
     node() {
         stage('Cloning Git')
@@ -51,4 +42,4 @@ pipeline {
       sh "yes | sudo cp -R bundle.tar.gz /var/www/html && cd /var/www/html && sudo tar -xvf bundle.tar.gz"
       echo 'Copy completed'
   }
-}
+
